@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -472,16 +473,39 @@
   }
 
   @media (max-width: 900px){
-    .art-grid{ grid-template-columns:repeat(2,1fr); }
+    .art-grid{ grid-template-columns:repeat(2,minmax(0,1fr)); }
     .modal{ grid-template-columns:1fr; }
     .modal-image .art-canvas{ min-height:220px; }
-    .about-grid{ grid-template-columns:1fr; }
-    .inspiration-grid{ grid-template-columns:1fr; }
-    .inspiration-photo{ max-width:280px; }
-    .about-portrait{ position:static; max-width:220px; }
+    .about-grid{ grid-template-columns:1fr; gap:1.75rem; }
+    .inspiration-grid{ grid-template-columns:1fr; gap:2rem; }
+    .inspiration-photo{ width:min(100%,280px); margin-inline:auto; }
+    .inspiration-text{ text-align:center; }
+    .inspiration-text p{ margin-inline:auto; }
+    .about-portrait{ position:static; width:min(100%,220px); margin-inline:auto; }
+    .about-grid > div:last-child{ text-align:center; }
+    .about-block p{ margin-left:auto; margin-right:auto; }
     .contact-grid{ grid-template-columns:1fr; }
   }
   @media (max-width: 640px){
+    .section-pad{ padding:3.5rem 1.1rem; }
+    #artworks.section-pad{ padding-bottom:3rem; }
+    #about.section-pad{ padding-top:3rem; padding-bottom:3.5rem; }
+    .section-head{ margin-bottom:1.6rem; }
+    .section-head .eyebrow{ margin-bottom:0.55rem; }
+    .section-head h2{ font-size:clamp(2rem,10vw,2.55rem); }
+    .filters{ gap:0.45rem; margin-bottom:1.5rem; }
+    .filter-btn{ padding:0.48rem 0.82rem; font-size:0.68rem; letter-spacing:0.09em; }
+    .art-grid{ grid-template-columns:repeat(2,minmax(0,1fr)); gap:1.15rem 0.75rem; }
+    .art-card-meta{ margin-top:0.55rem; display:block; }
+    .art-card-meta h3{ font-size:1rem; line-height:1.2; }
+    .art-card-meta span{ display:block; margin-top:0.2rem; font-size:0.58rem; }
+    .about-grid{ gap:1.35rem; }
+    .about-block{ margin-bottom:0; }
+    .about-block .eyebrow{ margin-bottom:0.45rem; }
+    .about-block h3{ margin-bottom:0.55rem; font-size:1.5rem; }
+    .about-block p{ font-size:0.92rem; margin-bottom:0.65rem; }
+    .inspiration-text h2{ font-size:2rem; margin-bottom:1rem; }
+    .inspiration-text p{ font-size:0.92rem; }
     .nav-links{
       position:fixed; inset:0 0 0 auto; width:min(78vw,320px);
       background:var(--mist);
@@ -494,10 +518,10 @@
     .nav-links.open{ transform:translateX(0); }
     .nav-links a{ font-size:1rem; }
     .nav-toggle{ display:flex; }
-    .art-grid{ grid-template-columns:1fr 1fr; }
   }
   @media (max-width: 460px){
-    .art-grid{ grid-template-columns:1fr; }
+    .hero-title{ font-size:clamp(2.75rem,15vw,4rem); }
+    .modal-overlay{ padding:0.75rem; }
     .modal-facts{ grid-template-columns:1fr; }
   }
 
