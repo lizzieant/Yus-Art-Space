@@ -596,7 +596,20 @@
   @media (prefers-reduced-motion: reduce){
     *{ animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important; scroll-behavior:auto !important; }
   }
-</style>
+
+    /* Placeholder backgrounds for artworks whose images have not yet been added */
+    .canvas-palm {
+      background:
+        radial-gradient(circle at 72% 24%, rgba(255,255,255,.45), transparent 24%),
+        linear-gradient(145deg, #7f9f91 0%, #d8c79f 52%, #6f8f83 100%);
+    }
+    .canvas-anemones {
+      background:
+        radial-gradient(circle at 28% 38%, rgba(255,255,255,.55), transparent 18%),
+        linear-gradient(145deg, #c8a6a8 0%, #e7d8c2 48%, #8ca18b 100%);
+    }
+
+  </style>
 </head>
 <body>
 
@@ -735,24 +748,28 @@
 <script>
   // ---------- DATA ----------
   const artworks = [
-    { id:'o1', title:'Tidal Hush', category:'Ocean', year:2023, medium:'Acrylic on canvas', size:'72 × 90 cm', canvas:'canvas-o1',
-      desc:'Painted after an early walk along a quiet shoreline, this piece holds the stillness just before the tide turns — the moment the water seems to hold its breath.' },
-    { id:'o2', title:'Deep Blue Hour', category:'Ocean', year:2022, medium:'Acrylic on canvas', size:'80 × 100 cm', canvas:'canvas-o2',
-      desc:'The hour after sunset, when the sea takes on a color that has no name. I wanted to capture the weight and calm of deep water at dusk.' },
-    { id:'o3', title:'Where the Waves Rest', category:'Ocean', year:2024, medium:'Acrylic on canvas', size:'65 × 80 cm', canvas:'canvas-o3',
-      desc:'A study of foam and light along the shallows, made slowly, layer by layer, to echo the patience of water finding its way to shore.' },
-    { id:'s1', title:'Amber Horizon', category:'Sky', year:2023, medium:'Acrylic on canvas', size:'90 × 60 cm', canvas:'canvas-s1',
-      desc:'Painted from memory, this piece revisits a single evening sky over my hometown, where warm light met the blue of coming night.' },
-    { id:'s2', title:'Traces of the Wind', category:'Ocean', year:2021, medium:'Acrylic on canvas', size:'-', canvas:'canvas-s2',
-      desc:'A restless sea, stirred by powerful winds. Through repeated, expressive brushstrokes, I sought to capture the force of the ever-shifting waves and the traces carved by the wind across the surface of the sea.' },
-    { id:'s3', title:'Quiet Dusk', category:'Sky', year:2022, medium:'Acrylic on canvas', size:'70 × 90 cm', canvas:'canvas-s3',
-      desc:'A muted, low-light sky, painted on a night when the mountains and clouds seemed to fold into the same soft color.' },
-    { id:'n1', title:'Green Silence', category:'Nature', year:2023, medium:'Acrylic on canvas', size:'80 × 100 cm', canvas:'canvas-n1',
-      desc:'Made after a walk through the hills near my family home, this painting tries to hold the particular quiet of deep summer green.' },
-    { id:'n2', title:'Mountain Breath', category:'Nature', year:2024, medium:'Acrylic on canvas', size:'75 × 95 cm', canvas:'canvas-n2',
-      desc:'The slow rise and fall of a familiar mountain ridge, painted in layers to suggest both its permanence and its constant, gentle change.' },
-    { id:'n3', title:'Rice Field Wind', category:'Nature', year:2022, medium:'Acrylic on canvas', size:'90 × 65 cm', canvas:'canvas-n3',
-      desc:'A childhood memory of wind moving through open fields, rendered in warm greens and golds gathered from the edges of harvest season.' },
+    { id:'o1', title:'Dazzling Blue', category:'Ocean', year:'—', medium:'—', size:'—', canvas:'canvas-o1',
+      desc:'I painted this because the blue sky and sea looked so bright and beautiful.' },
+    { id:'o2', title:'Underwater World', category:'Ocean', year:'—', medium:'—', size:'—', canvas:'canvas-o2',
+      desc:'A peaceful view beneath the surface, surrounded by deep blue water and gentle light.' },
+    { id:'o3', title:'Pastel Evening', category:'Ocean', year:'—', medium:'—', size:'—', canvas:'canvas-o3',
+      desc:'One evening, I visited the beach and found the sea painted in soft pastel colors. The world felt quietly wrapped in peace and gentleness.' },
+    { id:'s1', title:'Sunset Walk', category:'Ocean', year:'—', medium:'—', size:'—', canvas:'canvas-s1',
+      desc:'A peaceful walk along the beach as the sun sets.' },
+    { id:'s2', title:'Crimson Waves', category:'Ocean', year:'—', medium:'Acrylic on paper', size:'—', canvas:'canvas-s2',
+      desc:'A quiet sunset over a restless blue sea, capturing both peace and strength.' },
+    { id:'s3', title:'Forest Light', category:'Nature', year:'—', medium:'—', size:'—', canvas:'canvas-s3',
+      desc:'A glowing path through a deep green forest, filled with mystery and calm.' },
+    { id:'n1', title:'The First Milky Way', category:'Sky', year:'—', medium:'—', size:'—', canvas:'canvas-n1',
+      desc:'One night in the mountains, I saw the Milky Way for the first time.' },
+    { id:'n2', title:'Colorful Clouds', category:'Sky', year:'—', medium:'—', size:'—', canvas:'canvas-n2',
+      desc:'Though they share the same sky, each cloud reflects the light differently.' },
+    { id:'n3', title:'Wind-Tossed Sea', category:'Ocean', year:'—', medium:'—', size:'—', canvas:'canvas-n3',
+      desc:'The sea grows wild beneath the restless wind.' },
+    { id:'n4', title:'Palm Tree', category:'Nature', year:'—', medium:'—', size:'—', canvas:'canvas-palm',
+      desc:'Palm trees are one of my favorite things.' },
+    { id:'n5', title:'Field of Anemones', category:'Nature', year:'—', medium:'Hand mirror', size:'—', canvas:'canvas-anemones',
+      desc:'' },
   ];
 
   // ---------- RENDER: GRID ----------
