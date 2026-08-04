@@ -598,6 +598,16 @@
   }
 
     /* Placeholder backgrounds for artworks whose images have not yet been added */
+    .canvas-fuji-day {
+      background:
+        radial-gradient(55% 35% at 50% 62%, rgba(245,246,250,.96) 0%, rgba(210,220,235,.78) 45%, transparent 47%),
+        linear-gradient(180deg, #80b7df 0%, #dceaf4 58%, #b5c8d8 100%);
+    }
+    .canvas-fuji-evening {
+      background:
+        radial-gradient(55% 35% at 50% 62%, rgba(244,215,219,.96) 0%, rgba(182,140,162,.82) 45%, transparent 47%),
+        linear-gradient(180deg, #d99aae 0%, #f2c7b5 55%, #7f7895 100%);
+    }
     .canvas-palm {
       background:
         radial-gradient(circle at 72% 24%, rgba(255,255,255,.45), transparent 24%),
@@ -770,6 +780,10 @@
       desc:'Palm trees are one of my favorite things.' },
     { id:'n5', title:'Field of Anemones', category:'Nature', year:'—', medium:'Hand mirror', size:'—', canvas:'canvas-anemones',
       desc:'' },
+    { id:'f1', title:'Fuji (Daytime)', category:'Nature', year:'—', medium:'Stamp print on paper', size:'—', canvas:'canvas-fuji-day',
+      desc:'Mount Fuji changes color many times throughout the day. This work captures those subtle transformations through a simple stamp-printing technique.' },
+    { id:'f2', title:'Fuji (Evening)', category:'Nature', year:'—', medium:'Stamp print on paper', size:'—', canvas:'canvas-fuji-evening',
+      desc:'Mount Fuji changes color many times throughout the day. This work captures those subtle transformations through a simple stamp-printing technique.' },
   ];
 
   // ---------- RENDER: GRID ----------
